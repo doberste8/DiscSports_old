@@ -1,0 +1,37 @@
+<div id="containerAppRoot">
+  <!--<div class="jumbotron">-->
+  <!--  <h1 class="text-center">Welcome to Bread Knife!</h1>-->
+  <!--</div>-->
+  <div class="row">
+    <label>
+      Start Date
+      <input [(ngModel)]="startDate" (change)="updateLikeMatrix()">
+    </label>
+    <label>
+      End Date
+      <input [(ngModel)]="endDate" (change)="updateLikeMatrix()">
+    </label>
+  </div>
+  <div class="row">
+    <!--<table>-->
+    <!--  <tr *ngFor="let row of data2">-->
+    <!--    <td *ngFor="let cell of row">-->
+    <!--      {{cell}}-->
+    <!--    </td>-->
+    <!--  </tr>-->
+    <!--</table>-->
+    <!--<div class="col-sm-4">-->
+    <!--  <h1 class="text-center">Like Matrix Unsorted</h1>-->
+    <button class="btn btn-primary" type="button" (click)="Existing()">Sort</button>
+    <span>{{sort}}</span>
+    <!--<p>{{data2}}</p>-->
+    <!--  <chord-diagram *ngIf="data2" id="chart1" [data]="data2" [sort]="sort">Loading...</chord-diagram>-->
+    <!--  <chord-diagram *ngIf="data1" id="chart3" [data]="data1" [sort]="sort">Loading...</chord-diagram>-->
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h1 class="text-center">Like Chord Diagram</h1>
+      <chord-diagram *ngIf="data2" id="chart2" [data]="data2" [sort]="sort">Loading...</chord-diagram>
+    </div>
+  </div>
+</div>
